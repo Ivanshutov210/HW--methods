@@ -2,7 +2,7 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
 
-    public static void checkLeapYear(int year) {
+    public static void leapYear(int year) {
         if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
             System.out.println(year + " год — високосный год");
         } else {
@@ -10,9 +10,9 @@ public class Main {
         }
     }
 
-    public static void checkDeviceYear(int clientDeviceYear, int clientOS) {
+    public static void deviceYear(int deviceYear, int clientOS) {
 
-        if (clientDeviceYear < 2015) {
+        if (deviceYear < 2015) {
             if (clientOS == 0) {
                 System.out.println("Установите облегченную версию приложения для iOS по ссылке.");
             } else if (clientOS == 1) {
@@ -27,7 +27,7 @@ public class Main {
         }
     }
 
-    public static void checkDeliveryDistance(int deliveryDistance) {
+    public static void deliveryDistance(int deliveryDistance) {
         int total = 1;
         if (deliveryDistance < 20) {
             System.out.println("Потребуется дней: " + total);
@@ -45,13 +45,13 @@ public class Main {
     public static void main(String[] args) {
 
         System.out.println("Задание 1");
-        checkLeapYear(2021);
+        leapYear(2021);
 
-        System.out.println("\nЗадание 2");
-        checkDeviceYear(2015, 1);
+        System.out.println("Задание 2");
+        deviceYear(2015, 1);
 
-        System.out.println("\nЗадание 3");
-        checkDeliveryDistance(95);
+        System.out.println("Задание 3");
+        deliveryDistance(95);
     }
 }
 
