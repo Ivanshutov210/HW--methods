@@ -11,21 +11,19 @@ public class Main {
         }
     }
 
-    public static void deviceYear(int deviceYear, int clientOS) {
+    public static void deviceYear (int clientOs, int deviceYear) {
 
-        if (deviceYear < 2015) {
-            if (clientOS == 0) {
-                System.out.println("Установите облегченную версию приложения для iOS по ссылке.");
-            } else if (clientOS == 1) {
-                System.out.println("Установите облегченную версию приложения для Android по ссылке.");
-            }
-        } else {
-            if (clientOS == 0) {
-                System.out.println("Установите приложение для iOS по ссылке.");
-            } else if (clientOS == 1) {
-                System.out.println("Установите приложение для Android по ссылке.");
-            }
+        if (clientOs == 0 && deviceYear < 2025) {
+            System.out.println("Установите облегченную версию приложение для системы iOS по ссылке");
+        } else if (clientOs == 0) {
+            System.out.println("Установите приложение для системы iOS по ссылке");
         }
+        if (clientOs == 1 && deviceYear < 2025) {
+            System.out.println("Установите облегченную версию приложение для системы Android по ссылке");
+        } else if (clientOs == 1) {
+            System.out.println("Установите приложение для системы Android по ссылке");
+        }
+
     }
 
     public static void deliveryDistance(int deliveryDistance) {
@@ -49,7 +47,7 @@ public class Main {
         leapYear(2021);
 
         System.out.println("Задание 2");
-        deviceYear(2015, 1);
+        deviceYear(1,2014);
 
         System.out.println("Задание 3");
         deliveryDistance(95);
